@@ -1,5 +1,5 @@
 name: generate podcast feeds
-on:[push]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
