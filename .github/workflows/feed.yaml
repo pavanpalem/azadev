@@ -1,4 +1,4 @@
-name: Generate poadcast feeds
+name: Generate podcast feeds
 on: [push]
 jobs:
   build:
@@ -13,15 +13,13 @@ jobs:
       - name: install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip insatll pyymal
+          pip install pyyaml
       - name: Run Feed Generator
         run: python feed.py
       - name: Push repo
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name GitHub-actions
+          git config user. Email github-actions@github.com
           git add.
           git commit -m 'Modified Feed'
           git push
-      
-      
